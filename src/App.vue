@@ -1,26 +1,28 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Welcome to Your Vue.js App" />
+  <div id="app">
+    <div class="container">
+      <h1>To-do List Manager</h1>
+      <AddTodo />
+      <FilterTodos />
+      <Todos />
+      <h6 style="margin-top: 100px">
+        Powered by: Vue 3 | Vuex 4 | Axios | Ruby on Rails 6 | SQLite 3
+      </h6>
+    </div>
+  </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
+import Todos from "./components/Todos.vue";
+import AddTodo from "./components/AddTodo.vue";
+import FilterTodos from "./components/FilterTodos.vue";
 
 export default {
   name: "App",
   components: {
-    HelloWorld,
+    Todos,
+    AddTodo,
+    FilterTodos,
   },
 };
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
